@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="libs/normolize.css">
+        <link rel="stylesheet" href="libs/bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    </head>
+    <body>
+        <h1>Search by</h1> 
+        <form id="searchform" method="post" style="display: inline-block;"> 
+            <div>  
+                <em class="incorrectContract" style="display: none; color: red">this base has not object with such data</em> 
+                <label for="search_term">contract id or number</label> 
+                <input type="text" name="search_term" id="search_contract" />
+                <input type="submit" value="search" id="search_contract_button" /> <br>
+            </div> 
+        </form> 
+        <hr>
+        <form id="searchform" method="post"> 
+            <div> 
+                <em class="incorrectCustomer" style="display: none; color: red">this base has not object with such data</em> 
+                <label for="search_term">customer name or id </label> 
+                <input type="text" name="search_term" id="search_customer" />
+                <input type="submit" value="search" id="search_customer_button" /> <br>
+                <input type="checkbox" name="work" id="work" checked>work <br>
+                <input type="checkbox" name="connecting" id="connecting" checked>connecting <br>
+                <input type="checkbox" name="disconnected" id="disconnected" checked>disconnected <br>   
+            </div> 
+        </form> 
+        <hr>
+        <table class="default" style="display: none">
+            <tr>
+                <td colspan=2><b>информация про клиента</b></td>
+            </tr>
+            <tr>
+                <td >название клиента</td>
+                <td id="customer_name">[name_customer]</td>
+            </tr>
+            <tr>
+                <td >компания</td>
+                <td id="company">[ company]</td>
+            </tr>
+          <!--  <tr>
+                <td colspan=2><b>информация про договор</b></td>
+            </tr>
+            <tr>
+                <td >номер договора</td>
+                <td id="number">[ number]</td>
+            </tr>
+            <tr>
+                <td >дата подписания</td>
+                <td id="date">[ date_sign]</td>
+            </tr>-->
+            <tr>
+                <td colspan=2><b>Договор дата сервисы статус</b></td>
+            </tr>
+            <tr>
+                <td id="services"></td>
+                <!-- в services_name вывести название сервисов через <br> --> 
+            </tr>
+        </table>
+
+
+
+
+        <script src="libs/jquery-3.2.1.min.js"></script>
+        <script src="script/js.js"></script>
+
+    </body>
+</html>
